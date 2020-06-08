@@ -1,0 +1,16 @@
+-
+    name: shutdown
+    hosts: ansible1
+    tasks:
+      - name: shutdown
+        command: /sbin/shutdown -h now
+      - name: wait go down
+        local_action: wait_for host={{ ansible_ssh_host }} port=22 state=stopped
+-
+    name: shutdown
+    hosts: ansible2
+    tasks:
+      - name: shutdown
+        command: /sbin/shutdown -h now
+      - name: wait go down
+        local_action: wait_for host={{ ansible_ssh_host }} port=22 state=stopped
