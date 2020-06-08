@@ -1,0 +1,8 @@
+-
+    name: Copy readme.md file to node servers
+    hosts: all
+    tasks:
+      - name: Copy file
+        copy:
+            dest: /home/emm/README.md
+            src: ./README.md

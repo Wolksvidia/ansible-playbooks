@@ -1,0 +1,6 @@
+-
+    name: Test conectivity to node servers
+    hosts: all
+    tasks:
+      - name: Ping Test
+        ping:
